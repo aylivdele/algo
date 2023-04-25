@@ -31,5 +31,5 @@ RUN chmod 0755 /algo/algo-docker.sh
 # Note that not running as root will break if we don't have a matching userid
 # in the container. The filesystem has also been set up to assume root.
 USER root
-CMD [ "/algo/algo-docker.sh" ]
-ENTRYPOINT [ "/sbin/tini", "--", "-it" ]
+CMD [ "/algo/algo-docker.sh", "-it" ]
+ENTRYPOINT [ "/sbin/tini", "--" ]
