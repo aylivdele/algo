@@ -13,8 +13,9 @@ RUN adduser -D -H -u 19857 algo
 RUN mkdir -p /algo && mkdir -p /algo/configs
 
 #COPY config.cfg /data
-RUN ls -l
+
 WORKDIR /algo
+RUN ls -l
 COPY requirements.txt .
 RUN python3 -m pip --no-cache-dir install -U pip && \
     python3 -m pip --no-cache-dir install virtualenv && \
