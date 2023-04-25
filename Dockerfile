@@ -32,4 +32,4 @@ RUN chmod 0755 /algo/algo-docker.sh
 # in the container. The filesystem has also been set up to assume root.
 USER root
 CMD [ "/algo/algo-docker.sh" ]
-ENTRYPOINT [ "/sbin/tini", "--" ]
+ENTRYPOINT [ "/sbin/tini", "--", "-it" ]
